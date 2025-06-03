@@ -1,10 +1,9 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import myImg from "../../Assets/sara-removebg-preview.png";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  
+
   AiFillInstagram,
 
 } from "react-icons/ai";
@@ -44,12 +43,11 @@ function Home2() {
               <br />
               Whenever possible, I also apply my passion for developing products
               with <b className="purple">React.js and Angular</b>.
-            
+
             </p>
           </Col>
           <Col md={4} className="myAvtar">
             <Tilt>
-              <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
         </Row>
@@ -70,7 +68,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              
+
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/damri-sara-897137274/"
