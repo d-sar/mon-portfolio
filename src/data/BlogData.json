@@ -1,0 +1,56 @@
+[
+  {
+  "id": "The-Global-Entrepreneurship-Innovation-Week-2025",
+  "title": "My experience with Global Entrepreneurship & Innovation Week 2025",
+  "excerpt": "Retour sur ma participation au Hackathon AI Vigilante 2025 à l'ENSET Mohammedia, une expérience marquante axée sur l'innovation technologique au service de l'intégrité académique.",
+  "coverImage": "/Blog/hackathon2025.jpg",
+  "author": "Sara Damri",
+  "publishDate": "2025-05-27",
+  "readTime": "7 min read",
+  "tags": [
+    "Hackathon",
+    "ENSET Mohammedia",
+    "AI Vigilante",
+    "Fraude académique",
+    "Technologie",
+    "Expérience Étudiante"
+  ],
+  
+  "content": "Global Entrepreneurship Innovation Week – ENSET Challenge 2025\n\nThe Global Entrepreneurship Innovation Week 2025 was held from April 20 to 22, 2025, at ENSET Mohammedia. The event aimed to promote innovation, encourage entrepreneurship, and inspire students to explore entrepreneurial careers.\n\n## ENSET Challenge Participation\n\nDuring the event, I participated in the ENSET Challenge, organized by:\n- Google Developer Groups on Campus – ENSET Mohammedia\n- N7 Geeks Aggregation\n- N7 SECURITY CLUB\n\n## First Round – Project Submission\n\nOur team developed an interactive project addressing societal issues using AI, within 48 hours. We were proud to be selected among the top 10 finalist teams for the next phase: a 36-hour hackathon.\n\n## Hackathon AI Vigilante 2025\n\nIn the hackathon’s opening hour, the theme was revealed: \n\n> *\"Technological Innovations Against Academic Fraud in the Digital Age.\"\n\nWe worked non-stop for 36 hours to build a prototype tool for detecting similarities and suspicious behavior during online exams using:\n- Machine learning algorithms\n- Real-time behavioral analysis\n\n## Key Highlights\n\n###  Inspirational Talks\nExperts such as Oumayma Essarhi, Hamza AIT BEN YISSA, Ismail El Azizi, Mohannad TAZI, and Dr. Leila NAIM TIWARI shared insights on academic fraud and AI’s evolving role in combating it.\n\n###  Mentorship Support\nGuidance from our professors and mentors was instrumental:\nOUAGUID Abdellah, Mohamed Youssfi, Soufiane Hamida, Bouchra Bouihi, Abderrahim Chalfaouat, Azeddine KHIAT\n\n###  Smooth Organization\nThanks to the organizing team for top-notch logistics, relaxation spaces, food, and an inspiring atmosphere.\n\n## A Human and Technical Experience\n\nThis hackathon was more than just a technical challenge—it was a human adventure. I learned to manage stress, resolve creative differences, and lead a team through fatigue at 4 a.m.\n\n## Achievement\n\n🏆 We won 3rd place and received great feedback on our idea’s relevance and technical implementation. It was incredibly rewarding.\n\n## Looking Ahead\n\nThis experience fueled my interest in projects with social impact, especially in education and digital ethics. It also strengthened my commitment to:\n- Academic integrity\n- Transparency\n- Responsible tech development\n\n## Final Thoughts\n\nGWIE – ENSET Challenge 2025 will remain one of the most meaningful experiences of my academic journey—demanding, inspiring, and purposeful.\n\nThanks to ENSET Mohammedia, the speakers, mentors, and my amazing team!"
+
+  
+},
+
+  {
+    "id": "getting-started-with-react",
+    "title": "Getting Started with React: A Comprehensive Guide",
+    "excerpt": "Learn the fundamentals of React.js and build your first interactive web application with this step-by-step guide.",
+    "coverImage": "https://via.placeholder.com/400x200/6c5ce7/ffffff?text=React+Guide",
+    "author": "Sara Damri",
+    "publishDate": "2024-01-15",
+    "readTime": "8 min read",
+    "tags": [
+      "React",
+      "JavaScript",
+      "Frontend",
+      "Tutorial"
+    ],
+    "content": "React has revolutionized the way we build user interfaces. In this comprehensive guide, we'll explore the core concepts of React and build a practical application from scratch.\n\n## What is React?\n\nReact is a JavaScript library for building user interfaces, particularly web applications. It was developed by Facebook and has become one of the most popular frontend frameworks.\n\n### Key Features:\n- **Component-Based**: Build encapsulated components that manage their own state\n- **Virtual DOM**: Efficient updates and rendering\n- **Learn Once, Write Anywhere**: Use React for web, mobile, and desktop applications\n\n## Setting Up Your Development Environment\n\nBefore we start coding, let's set up our development environment:\n\n```bash\nnpx create-react-app my-first-app\ncd my-first-app\nnpm start\n```\n\n## Creating Your First Component\n\nLet's create a simple component:\n\n```jsx\nfunction Welcome(props) {\n  return <h1>Hello, {props.name}!</h1>;\n}\n```\n\nThis is just the beginning of your React journey. Stay tuned for more advanced topics!"
+  },
+  {
+    "id": "modern-css-techniques",
+    "title": "Modern CSS Techniques for Better Web Design",
+    "excerpt": "Discover the latest CSS features and techniques that will elevate your web design skills and create stunning user interfaces.",
+    "coverImage": "https://via.placeholder.com/400x200/3498db/ffffff?text=Modern+CSS",
+    "author": "Sara Damri",
+    "publishDate": "2024-01-10",
+    "readTime": "6 min read",
+    "tags": [
+      "CSS",
+      "Web Design",
+      "Frontend",
+      "Responsive"
+    ],
+    "content": "CSS has evolved significantly over the years. Modern CSS offers powerful features that make creating beautiful, responsive designs easier than ever.\n\n## CSS Grid Layout\n\nCSS Grid is a two-dimensional layout system that gives you complete control over your layouts:\n\n```css\n.container {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));\n  gap: 2rem;\n}\n```\n\n## Flexbox for One-Dimensional Layouts\n\nFlexbox is perfect for arranging items in a single direction:\n\n```css\n.flex-container {\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n```\n\n## CSS Custom Properties (Variables)\n\nCustom properties make your CSS more maintainable:\n\n```css\n:root {\n  --primary-color: #3498db;\n  --secondary-color: #2ecc71;\n}\n\n.button {\n  background-color: var(--primary-color);\n}\n```\n\nThese modern techniques will help you create more efficient and maintainable stylesheets."
+  }
+]

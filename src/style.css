@@ -1,17 +1,76 @@
-html {
-  --section-background-color: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.582),
-    rgba(12, 8, 24, 0.904)
-  );
+/* Dark Theme Variables (Default) */
+html[data-theme="dark"] {
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904));
 
-  --image-gradient: linear-gradient(
-    to bottom left,
-    rgba(17, 16, 16, 0.678),
-    rgba(12, 10, 22, 0.863)
-  );
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
 
   --imp-text-color: #c770f0;
+  --primary-bg-color: #0d0d15;
+  --secondary-bg-color: #181a27;
+  --text-color: #ffffff;
+  --text-secondary: #bbbbbb;
+  --navbar-bg: rgba(23, 20, 34, 0.25);
+  --navbar-bg-scroll: #181a27;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --preloader-bg: #0c0513;
+  --footer-bg: #181a27;
+  --home-bg: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  --navbar-text-color: #ffffff;
+}
+
+/* Light Theme Variables */
+html[data-theme="light"] {
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(240, 240, 240, 0.9),
+      rgba(250, 250, 250, 0.95));
+
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(240, 240, 240, 0.8),
+      rgba(250, 250, 250, 0.9));
+
+  --imp-text-color: #8e44ad;
+  --primary-bg-color: #ffffff;
+  --secondary-bg-color: #f8f9fa;
+  --text-color: #2c3e50;
+  --text-secondary: #6c757d;
+  --navbar-bg: rgba(248, 249, 250, 0.95);
+  --navbar-bg-scroll: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(0, 0, 0, 0.1);
+  --preloader-bg: #ffffff;
+  --footer-bg: #f8f9fa;
+  --home-bg: linear-gradient(to left, rgb(240, 240, 250), rgb(250, 250, 255));
+  --navbar-text-color: #2c3e50;
+}
+
+/* Default fallback (Dark theme) */
+html {
+  --section-background-color: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.582),
+      rgba(12, 8, 24, 0.904));
+
+  --image-gradient: linear-gradient(to bottom left,
+      rgba(17, 16, 16, 0.678),
+      rgba(12, 10, 22, 0.863));
+
+  --imp-text-color: #c770f0;
+  --primary-bg-color: #0d0d15;
+  --secondary-bg-color: #181a27;
+  --text-color: #ffffff;
+  --text-secondary: #bbbbbb;
+  --navbar-bg: rgba(23, 20, 34, 0.25);
+  --navbar-bg-scroll: #181a27;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --preloader-bg: #0c0513;
+  --footer-bg: #181a27;
+  --home-bg: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  --navbar-text-color: #ffffff;
 }
 
 .purple {
@@ -32,7 +91,7 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: #0c0513;
+  background-color: var(--preloader-bg);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -76,7 +135,7 @@ button:focus {
 /* Navbar Section  */
 /* --------- */
 .sticky {
-  background-color: #1b1a2ea9 !important;
+  background-color: var(--navbar-bg-scroll) !important;
   transition: all 0.3s ease-out 0s !important;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
   backdrop-filter: blur(15px) !important;
@@ -87,6 +146,7 @@ button:focus {
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
+  background-color: var(--navbar-bg) !important;
 }
 
 .navbar-toggler {
@@ -144,14 +204,16 @@ button:focus {
   .navbar {
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
-    background-color: #181a27 !important;
+    background-color: var(--navbar-bg-scroll) !important;
   }
+
   .navbar-nav .nav-item a::after {
     display: none !important;
   }
 }
+
 .navbar-brand {
-  color: rgb(250, 250, 250) !important;
+  color: var(--navbar-text-color) !important;
 }
 
 .logo {
@@ -160,7 +222,7 @@ button:focus {
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: var(--navbar-text-color) !important;
   padding-right: 1rem !important;
   padding-left: 1rem !important;
 }
@@ -209,10 +271,14 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  animation-name: wave-animation;
+  /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s;
+  /* Change to speed up or slow down */
+  animation-iteration-count: infinite;
+  /* Never stop waving :) */
+  transform-origin: 70% 70%;
+  /* Pivot around the bottom-left palm */
   display: inline-block;
 }
 
@@ -220,28 +286,38 @@ button:focus {
   0% {
     transform: rotate(0deg);
   }
+
   10% {
     transform: rotate(14deg);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  }
+
+  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     transform: rotate(-8deg);
   }
+
   30% {
     transform: rotate(14deg);
   }
+
   40% {
     transform: rotate(-4deg);
   }
+
   50% {
     transform: rotate(10deg);
   }
+
   60% {
     transform: rotate(0deg);
-  } /* Reset for the last half to pause */
+  }
+
+  /* Reset for the last half to pause */
   100% {
     transform: rotate(0deg);
   }
 }
+
 #tsparticles {
   position: fixed !important;
   background-repeat: no-repeat !important;
@@ -266,7 +342,7 @@ button:focus {
 
 .home-content {
   padding: 9rem 0 2rem !important;
-  color: whitesmoke;
+  color: var(--text-color);
   text-align: left;
 }
 
@@ -289,6 +365,7 @@ button:focus {
   color: #be6adf !important;
   font-weight: 600 !important;
 }
+
 .Typewriter__cursor {
   font-size: 2.4em !important;
   color: #b562d6 !important;
@@ -300,6 +377,7 @@ button:focus {
     font-weight: 500 !important;
     position: absolute !important;
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
@@ -402,11 +480,12 @@ button:focus {
 /* Footer */
 /* --------- */
 .footer {
-  background-color: rgb(10, 4, 22);
+  background-color: var(--footer-bg);
   bottom: 0 !important;
   padding-top: 10px !important;
-  padding-bottom: 8px !important ;
+  padding-bottom: 8px !important;
 }
+
 .footer-copywright {
   text-align: center !important;
 }
@@ -428,10 +507,11 @@ button:focus {
 
 .footer h3 {
   font-size: 1em;
-  color: white !important;
+  color: var(--text-color) !important;
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
 }
+
 .footer-icons {
   margin-top: 0.5em !important;
   margin-bottom: 0.5em !important;
@@ -441,6 +521,7 @@ button:focus {
 .blockquote-footer {
   color: #a588c0 !important;
 }
+
 /* --------- */
 /* Projects */
 /* --------- */
@@ -461,12 +542,13 @@ button:focus {
 
 .project-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
-  background-color: transparent !important;
+  color: var(--text-color) !important;
+  background-color: var(--card-bg) !important;
   opacity: 0.9 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
+
 .project-card-view:hover {
   transform: scale(1.02) !important;
   overflow: hidden !important;
@@ -482,15 +564,15 @@ button:focus {
 }
 
 .blog-card-view {
-  background-color: transparent !important;
+  background-color: var(--card-bg) !important;
   box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
-  color: white !important;
+  color: var(--text-color) !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 
 .blog-link {
-  color: white !important;
+  color: var(--text-color) !important;
   text-decoration: none !important;
 }
 
@@ -527,12 +609,14 @@ button:focus {
   background-color: #6d20c5d7 !important;
   border-color: #6d20c5d7 !important;
 }
+
 .btn:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 .project-heading {
-  color: white !important;
+  color: var(--text-color) !important;
   font-size: 2.3em !important;
   font-weight: 500 !important;
   padding-top: 10px !important;
@@ -571,11 +655,16 @@ button:focus {
   }
 }
 
+p {
+  font-size: 1rem;
+}
+
 .tech-icons:hover {
   transform: scale(1.05) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
+
 .tech-icon-images {
   padding: 20px !important;
   line-height: 1.6 !important;
@@ -598,6 +687,7 @@ button:focus {
     padding-top: 0 !important;
   }
 }
+
 /* --------- */
 /* Resume */
 /* --------- */
@@ -635,6 +725,7 @@ button:focus {
     padding-left: 15px !important;
   }
 }
+
 .resume .resume-title {
   font-size: 2em;
   font-weight: 700;
@@ -711,10 +802,12 @@ button:focus {
   animation-fill-mode: forwards;
   animation-duration: 0.85s;
 }
+
 @keyframes likeAnimation {
   0% {
     transform: scale(1.5);
   }
+
   100% {
     transform: scale(1);
   }
@@ -738,6 +831,506 @@ button:focus {
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
 }
+
 .fork-btn-inner::after {
   display: none !important;
+}
+
+
+/* Education.css – Style Skillset */
+
+.education-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.education-box {
+  width: 1500px;
+  height: 100px;
+  margin: 15px !important;
+  padding: 10px !important;
+  opacity: 0.93 !important;
+  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  border-radius: 5px !important;
+  display: table !important;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  overflow: hidden !important;
+  transition: all 0.4s ease 0s !important;
+
+}
+
+.education-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 15px rgba(162, 89, 255, 0.6);
+}
+
+.education-box svg {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.education-box .year {
+  font-size: 0.9rem;
+  color: var(--imp-text-color);
+  font-weight: 500;
+}
+
+.education-box .title {
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.education-box .description {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+/* Background (global theme) */
+body {
+  background-color: var(--primary-bg-color);
+  color: var(--text-color);
+}
+
+/* Theme Toggle Button */
+.theme-toggle-btn {
+  border: none !important;
+  background: transparent !important;
+  color: var(--navbar-text-color) !important;
+  font-size: 1.2rem !important;
+  padding: 0.5rem !important;
+  margin-left: 1rem !important;
+  transition: all 0.3s ease !important;
+  border-radius: 50% !important;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--imp-text-color) !important;
+  color: white !important;
+  transform: scale(1.1) !important;
+}
+
+.theme-toggle-btn:focus {
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease !important;
+}
+
+/* About section text colors */
+.home-about-description {
+  color: var(--text-color) !important;
+  padding-top: 100px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+.home-about-social {
+  text-align: center !important;
+  padding-top: 25px;
+  color: var(--text-color) !important;
+}
+
+/* --------- */
+/* Blog Section */
+/* --------- */
+.blog-section {
+  position: relative !important;
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image: var(--section-background-color) !important;
+}
+
+.blog-heading {
+  color: var(--text-color) !important;
+  font-size: 2.3em !important;
+  font-weight: 500 !important;
+  padding-top: 10px !important;
+  text-align: center !important;
+  margin-bottom: 20px !important;
+}
+
+.blog-description {
+  color: var(--text-secondary) !important;
+  text-align: center !important;
+  font-size: 1.1em !important;
+  margin-bottom: 50px !important;
+  max-width: 600px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.blog-card-col {
+  padding: 15px !important;
+  margin-bottom: 30px !important;
+}
+
+/* Blog Card Styles */
+.blog-card-view {
+  background-color: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  transition: all 0.3s ease !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.blog-card-view:hover {
+  transform: translateY(-5px) !important;
+  box-shadow: 0 8px 25px rgba(108, 92, 231, 0.15) !important;
+}
+
+.blog-card-image-container {
+  position: relative !important;
+  overflow: hidden !important;
+  height: 200px !important;
+}
+
+.blog-card-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  transition: transform 0.3s ease !important;
+}
+
+.blog-card-view:hover .blog-card-img {
+  transform: scale(1.05) !important;
+}
+
+.blog-card-overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(108, 92, 231, 0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.blog-card-view:hover .blog-card-overlay {
+  opacity: 1 !important;
+}
+
+.blog-read-more {
+  color: white !important;
+  font-size: 1.5rem !important;
+  text-decoration: none !important;
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-read-more:hover {
+  background: rgba(255, 255, 255, 0.3) !important;
+  transform: scale(1.1) !important;
+  color: white !important;
+}
+
+.blog-card-body {
+  padding: 20px !important;
+  flex-grow: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.blog-card-meta {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin-bottom: 15px !important;
+  font-size: 0.85rem !important;
+  color: var(--text-secondary) !important;
+}
+
+.blog-date,
+.blog-read-time {
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.blog-icon {
+  font-size: 0.9rem !important;
+}
+
+.blog-card-title {
+  margin-bottom: 15px !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.blog-title-link {
+  color: var(--text-color) !important;
+  text-decoration: none !important;
+  transition: color 0.3s ease !important;
+}
+
+.blog-title-link:hover {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+}
+
+.blog-card-excerpt {
+  color: var(--text-secondary) !important;
+  font-size: 0.95rem !important;
+  line-height: 1.6 !important;
+  margin-bottom: 15px !important;
+  flex-grow: 1 !important;
+}
+
+.blog-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  margin-bottom: 15px !important;
+}
+
+.blog-tag {
+  background: var(--imp-text-color) !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+}
+
+.blog-card-footer {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 15px !important;
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.blog-author {
+  color: var(--text-secondary) !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+}
+
+.blog-read-more-text {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-read-more-text:hover {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+  transform: translateX(3px) !important;
+}
+
+/* Blog Post Page Styles */
+.blog-post-section {
+  position: relative !important;
+  padding-top: 120px !important;
+  padding-bottom: 50px !important;
+  background-image: var(--section-background-color) !important;
+  min-height: 100vh !important;
+}
+
+.blog-post-header {
+  margin-bottom: 30px !important;
+}
+
+.blog-back-link {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  margin-bottom: 20px !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-back-link:hover {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+  transform: translateX(-3px) !important;
+}
+
+.blog-post-meta {
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+  margin-bottom: 20px !important;
+  flex-wrap: wrap !important;
+}
+
+.blog-post-date,
+.blog-post-read-time {
+  color: var(--text-secondary) !important;
+  font-size: 0.9rem !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.blog-share-btn {
+  border-color: var(--imp-text-color) !important;
+  color: var(--imp-text-color) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
+
+.blog-share-btn:hover {
+  background-color: var(--imp-text-color) !important;
+  border-color: var(--imp-text-color) !important;
+  color: white !important;
+}
+
+.blog-post-title {
+  color: var(--text-color) !important;
+  font-size: 2.5rem !important;
+  font-weight: 700 !important;
+  line-height: 1.2 !important;
+  margin-bottom: 20px !important;
+}
+
+.blog-post-author-info {
+  color: var(--text-secondary) !important;
+  font-size: 1rem !important;
+  margin-bottom: 20px !important;
+}
+
+.blog-post-tags {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 10px !important;
+  margin-bottom: 30px !important;
+}
+
+.blog-post-tag {
+  background: var(--imp-text-color) !important;
+  color: white !important;
+  padding: 6px 12px !important;
+  border-radius: 15px !important;
+  font-size: 0.85rem !important;
+  font-weight: 500 !important;
+}
+
+.blog-post-image {
+  margin-bottom: 40px !important;
+  border-radius: 15px !important;
+  overflow: hidden !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+
+.blog-post-cover {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important;
+  object-fit: cover !important;
+}
+
+.blog-post-content {
+  color: var(--text-color) !important;
+  line-height: 1.8 !important;
+  font-size: 1.1rem !important;
+}
+
+.blog-post-subtitle {
+  color: var(--text-color) !important;
+  font-size: 1.8rem !important;
+  font-weight: 600 !important;
+  margin-top: 40px !important;
+  margin-bottom: 20px !important;
+  border-bottom: 2px solid var(--imp-text-color) !important;
+  padding-bottom: 10px !important;
+}
+
+.blog-post-subheading {
+  color: var(--text-color) !important;
+  font-size: 1.4rem !important;
+  font-weight: 600 !important;
+  margin-top: 30px !important;
+  margin-bottom: 15px !important;
+}
+
+.blog-post-paragraph {
+  margin-bottom: 20px !important;
+  text-align: justify !important;
+}
+
+.blog-post-footer {
+  margin-top: 50px !important;
+  padding-top: 30px !important;
+  border-top: 2px solid var(--border-color) !important;
+  text-align: center !important;
+}
+
+.blog-back-to-list {
+  color: var(--imp-text-color) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 12px 24px !important;
+  border: 2px solid var(--imp-text-color) !important;
+  border-radius: 25px !important;
+  transition: all 0.3s ease !important;
+}
+
+.blog-back-to-list:hover {
+  background-color: var(--imp-text-color) !important;
+  color: white !important;
+  text-decoration: none !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Responsive Design for Blog */
+@media (max-width: 768px) {
+  .blog-post-title {
+    font-size: 2rem !important;
+  }
+
+  .blog-post-meta {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  .blog-card-col {
+    padding: 10px !important;
+  }
+
+  .blog-post-content {
+    font-size: 1rem !important;
+  }
+
+  .blog-post-subtitle {
+    font-size: 1.5rem !important;
+  }
 }

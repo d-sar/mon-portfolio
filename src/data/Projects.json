@@ -1,0 +1,38 @@
+[
+      {
+      "title": " aIQraa",
+      "imageSrc": "/Projects/aiqraa.png",
+      "description": "aIQraa (Hackathon Project 3td place) is an AI-powered academic success platform that adapts to each student’s learning style. It offers personalized roadmaps, smart assessments, and real-time support to boost engagement, improve outcomes, and support educators with actionable insights.",
+      "skills": ["React.js |", "Grap ","| lamma |" ],
+      "source": "https://github.com/d-sar/DigitalBanking_Frontend"
+    },
+
+    {
+      "title": "Digital Binking Platform",
+      "imageSrc": "/Projects/digitalBanking.png",
+      "description": "A secure full-stack app for managing customers, bank accounts (savings & current), and transactions.",
+      "skills": ["Spring Boot |", "Angular ","| JWT |" ,"REST API"],
+      "source": "https://github.com/d-sar/DigitalBanking_Frontend"
+    },
+    {
+      "title": "learning platform nosql",
+      "imageSrc": "/Projects/elearning.png",
+      "description": "Educational platform focused on NoSQL databases like MongoDB and Redis.",
+      "skills": ["Node.js | ", "Redis | ", "Mongodb"],
+      "source": "https://www.github.com"
+    },
+    {
+      "title": "Tariq",
+      "imageSrc": "/Projects/tariq.png",
+      "description": "Tariq is a mobile application powered by AI that provides real-time taxi fare estimates based on location, time, and distance. Its goal is to enhance user experience and protect passengers from price manipulation.",
+      "skills": ["Spring Boot |", "Angular ","| JWT |" ,"REST API"],
+      "source": "https://github.com/d-sar/DigitalBanking_Frontend"
+    },
+    {
+      "title": "Tasks Manager",
+      "imageSrc": "projects/project.png",
+      "description": "Web app to help developers manage their daily tasks efficiently with a clean UI.",
+      "skills": ["React.js | ", "Spring Boot | ", "REST API | ","Mysql"],
+      "source": "https://www.github.com"
+    }
+  ]
