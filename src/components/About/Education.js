@@ -1,6 +1,6 @@
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa";
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import {  Row, Col} from 'react-bootstrap';
 
 import educationData from '../../data/EducationData.json';
 

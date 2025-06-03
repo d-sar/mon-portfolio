@@ -3,9 +3,6 @@ import { Col, Row } from "react-bootstrap";
 import {
   SiVisualstudiocode,
   SiPostman,
-  SiSlack,
-  SiVercel,
-  SiMacos,
   SiAndroidstudio,
 } from "react-icons/si";
 
